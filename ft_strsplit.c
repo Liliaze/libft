@@ -6,63 +6,54 @@
 /*   By: dboudy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/07 10:54:20 by dboudy            #+#    #+#             */
-/*   Updated: 2015/12/14 10:17:53 by dboudy           ###   ########.fr       */
+/*   Updated: 2016/01/14 13:34:18 by dboudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
+#include "./includes/libft.h"
 
-static int	ft_len_and_clear(char *dest, char const *src, char c)
+static int	nb_word(const char *str, char c)
 {
-	int		word;
-	int		i;
-	int		j;
+	int		len;
 
-	j = 0;
-	i = 0;
-	word = 1;
-	while (src[i])
+	len = 1;
+	while (str)
 	{
-		while (src[i] == c && src[i])
-			i++;
-		if (src[i] != c && src[i])
-			word++;
-		while (src[i] != c && src[i])
-			dest[j++] = src[i++];
-		if (src[i] == c)
-			dest[j++] = src[i++];
+		str = ft_strchr(str, c);
+		while (str && *str == c)
+			++str;
+		if (!str || !*str)
+			return (len);
+		++len;
 	}
-	while (j <= i)
-		dest[j++] = '\0';
-	return (word);
+	return (len);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(const char *s, char c)
 {
 	char	**tab;
+	int		len;
 	char	*tmp;
-	int		i;
-	int		j;
+	char	**save;
 
-	i = 0;
-	j = 0;
-	tmp = (char *)malloc(sizeof(*s) * (ft_strlen((char *)s) + 1));
-	if (!tmp)
+	if (!s)
 		return (NULL);
-	tab = (char **)malloc(sizeof(*s) * ft_len_and_clear(tmp, s, c));
-	if (!tab)
-		return (NULL);
-	while (tmp[i])
+	while (*s == c && *s)
+		++s;
+	if (!*s)
+		return (ft_memalloc(sizeof(char*)));
+	len = nb_word(s, c) + 1;
+	tab = (char **)ft_memalloc(sizeof(char *) * len);
+	save = tab;
+	while (--len)
 	{
-		if (tmp[i] != c && tmp[i])
-			tab[j++] = tmp + i;
-		while (tmp[i] != c && tmp[i])
-			i++;
-		if (tmp[i] == c)
-			tmp[i++] = '\0';
+		tmp = ft_strchr(s, c);
+		if (!tmp && (*(tab++) = ft_strdup(s)))
+			break ;
+		*(tab++) = ft_strsub(s, 0, tmp - s);
+		while (*tmp == c)
+			++tmp;
+		s = tmp;
 	}
-	tab[j] = NULL;
-	free(tmp);
-	return (tab);
+	return (save);
 }

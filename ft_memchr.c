@@ -6,12 +6,11 @@
 /*   By: dboudy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 11:56:12 by dboudy            #+#    #+#             */
-/*   Updated: 2015/12/07 16:26:55 by dboudy           ###   ########.fr       */
+/*   Updated: 2016/01/14 10:31:35 by dboudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "./includes/libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

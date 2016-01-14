@@ -6,14 +6,14 @@
 #    By: dboudy <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 10:53:12 by dboudy            #+#    #+#              #
-#    Updated: 2015/12/10 13:48:35 by dboudy           ###   ########.fr        #
+#    Updated: 2016/01/08 16:35:57 by dboudy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 GCC = gcc
 CFLAGS = -Werror -Wextra -Wall
-HEADERS = libft.h
+HEADERS = includes/
 SRCS = ft_itoa.c ft_putchar_fd.c ft_strcmp.c \
 	   ft_strmap.c ft_strstr.c ft_memalloc.c \
 	   ft_putendl.c ft_strcpy.c ft_strmapi.c \
@@ -64,13 +64,11 @@ $(OBJS):
 	 $(GCC) -c $(FLAGS) -I $(HEADERS) $(SRCS) 
 
 $(NAME): $(OBJS)
-	ar r $(NAME) $(OBJS)
+	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 
-test:
-	$(GCC) -I $(INCLUDES) $(SRCS) test.c
-
 .PHONY: clean
+
 clean:
 	rm -rf $(OBJS)
 

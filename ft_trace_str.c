@@ -6,11 +6,11 @@
 /*   By: dboudy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 16:17:48 by dboudy            #+#    #+#             */
-/*   Updated: 2015/12/09 16:41:49 by dboudy           ###   ########.fr       */
+/*   Updated: 2016/01/08 13:11:32 by dboudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./includes/libft.h"
 
 void	ft_trace_str(unsigned int i, char *str)
 {

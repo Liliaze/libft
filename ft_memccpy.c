@@ -6,12 +6,11 @@
 /*   By: dboudy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 17:50:57 by dboudy            #+#    #+#             */
-/*   Updated: 2015/12/07 16:27:13 by dboudy           ###   ########.fr       */
+/*   Updated: 2016/01/14 10:32:06 by dboudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "./includes/libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
