@@ -6,7 +6,7 @@
 #    By: dboudy <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 10:53:12 by dboudy            #+#    #+#              #
-#    Updated: 2016/01/08 16:35:57 by dboudy           ###   ########.fr        #
+#    Updated: 2016/01/23 12:43:01 by dboudy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRCS = ft_itoa.c ft_putchar_fd.c ft_strcmp.c \
 	   ft_lstnew.c ft_lstdelone.c ft_lstdel.c \
 	   ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 	   ft_trace_i.c ft_trace_str.c ft_trace_c.c \
+	   get_next_line.c \
 
 OBJS = ft_itoa.o ft_putchar_fd.o ft_strcmp.o \
 	   ft_strmap.o ft_strstr.o ft_memalloc.o \
@@ -57,6 +58,7 @@ OBJS = ft_itoa.o ft_putchar_fd.o ft_strcmp.o \
 	   ft_lstnew.o ft_lstdelone.o ft_lstdel.o \
 	   ft_lstadd.o ft_lstiter.o ft_lstmap.o \
 	   ft_trace_i.o ft_trace_str.o ft_trace_c.o \
+	   get_next_line.o \
 
 all: $(NAME)
 
@@ -67,7 +69,7 @@ $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 
-.PHONY: clean
+.PHONY: clean fclean mrproper re
 
 clean:
 	rm -rf $(OBJS)
