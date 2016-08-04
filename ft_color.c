@@ -10,24 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-static void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-static void	ft_putstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
-}
+#include "libft.h"
 
 void		ft_color(char *str)
 {

@@ -97,7 +97,8 @@ void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
-void				ft_color(char *str);
+
+void				ft_color(char *str, int color);
 void				ft_trace_i(unsigned int i, int nb);
 void				ft_trace_str(unsigned int i, char *str);
 void				ft_trace_c(unsigned int i, char c);
