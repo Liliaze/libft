@@ -35,7 +35,7 @@ SRCS = ft_itoa.c ft_putchar_fd.c ft_strcmp.c \
 	   ft_lstnew.c ft_lstdelone.c ft_lstdel.c \
 	   ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 	   ft_trace_i.c ft_trace_str.c ft_trace_c.c \
-	   get_next_line.c \
+	   get_next_line.c ft_lstsort_insert.c ft_lstsize.c
 
 OBJS = ft_itoa.o ft_putchar_fd.o ft_strcmp.o \
 	   ft_strmap.o ft_strstr.o ft_memalloc.o \
@@ -58,7 +58,7 @@ OBJS = ft_itoa.o ft_putchar_fd.o ft_strcmp.o \
 	   ft_lstnew.o ft_lstdelone.o ft_lstdel.o \
 	   ft_lstadd.o ft_lstiter.o ft_lstmap.o \
 	   ft_trace_i.o ft_trace_str.o ft_trace_c.o \
-	   get_next_line.o \
+	   get_next_line.o ft_lstsort_insert.o ft_lstsize.o
 
 all: $(NAME)
 
