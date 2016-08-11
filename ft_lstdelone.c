@@ -19,7 +19,7 @@ void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 	if (!alst || !del || !*alst)
 		return ;
 	element = *alst;
-	del(element->content, element->content_size);
+	del(element->name, element->name_size);
 	free(element);
 	*alst = NULL;
 }

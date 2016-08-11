@@ -14,7 +14,7 @@
 
 int		ft_lststrcmp(t_list *a, t_list *b)
 {
-	return (ft_strcmp((char*)a->content, (char*)b->content));
+	return (ft_strcmp((char*)a->name, (char*)b->name));
 }
 
 t_list	*ft_lstparent(t_list *lst, t_list *item)

@@ -21,8 +21,8 @@
 
 typedef struct		s_list
 {
-	void			*content;
-	size_t			content_size;
+	void			*name;
+	size_t			name_size;
 	struct s_list	*next;
 }					t_list;
 
@@ -30,7 +30,7 @@ int					get_next_line(int const fd, char **line);
 
 int					ft_lstsize(t_list *lst);
 int					ft_lststrcmp(t_list *a, t_list *b);
-t_list				*ft_lstnew(void const *content, size_t content_size);
+t_list				*ft_lstnew(void const *name, size_t name_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstswap(t_list *root, t_list *a, t_list *b);
 t_list				*ft_lstparent(t_list *lst, t_list *item);
