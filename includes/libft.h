@@ -6,7 +6,7 @@
 /*   By: dboudy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:32:30 by dboudy            #+#    #+#             */
-/*   Updated: 2016/01/23 12:44:08 by dboudy           ###   ########.fr       */
+/*   Updated: 2016/09/05 11:41:36 by dboudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
-void				ft_color(char *str);
+void				ft_color(char *str1, char *str2);
 void				ft_trace_i(unsigned int i, int nb);
 void				ft_trace_str(unsigned int i, char *str);
 void				ft_trace_c(unsigned int i, char c);

@@ -6,15 +6,17 @@
 /*   By: dboudy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 15:54:21 by dboudy            #+#    #+#             */
-/*   Updated: 2015/12/11 12:22:41 by dboudy           ###   ########.fr       */
+/*   Updated: 2016/09/05 14:24:48 by dboudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_color(char *str)
+void		ft_color(char *str1, char *str2)
 {
-	ft_putstr("\033[01;");
-	ft_putstr(str);
+	ft_putstr("\033[");
+	ft_putstr(str1);
+	ft_putstr(";");
+	ft_putstr(str2);
 	ft_putstr("m");
 }
