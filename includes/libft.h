@@ -6,7 +6,7 @@
 /*   By: dboudy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:32:30 by dboudy            #+#    #+#             */
-/*   Updated: 2016/09/05 11:41:36 by dboudy           ###   ########.fr       */
+/*   Updated: 2016/10/10 15:04:00 by dboudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int					get_next_line(int const fd, char **line);
 
 int					ft_lstsize(t_list *lst);
 int					ft_lststrcmp(t_list *a, t_list *b);
+void				ft_lstprint(t_list *a);
 t_list				*ft_lstnew(void const *name, size_t name_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstswap(t_list *root, t_list *a, t_list *b);
@@ -92,6 +93,7 @@ char				*ft_itoa(int n);
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr(char const *s);
+void				ft_putstrn(char const *s);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);

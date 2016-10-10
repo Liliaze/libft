@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstprint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dboudy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 13:51:10 by dboudy            #+#    #+#             */
-/*   Updated: 2016/10/10 15:03:34 by dboudy           ###   ########.fr       */
+/*   Created: 2016/10/07 16:33:10 by dboudy            #+#    #+#             */
+/*   Updated: 2016/10/07 17:26:38 by dboudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putstr(char	const *s)
+void	ft_lstprint(t_list *lst)
 {
-	int		i;
+	t_list *head;
 
-	i = 0;
-	while (s[i])
-		write(1, &s[i++], 1);
-}
-
-void	ft_putstrn(char	const *s)
-{
-	int		i;
-
-	i = 0;
-	while (s[i])
-		write(1, &s[i++], 1);
-	write(1, "\n", 1);
+	head = lst;
+	ft_putstr("-------- Start debug list -------- \n");
+	while (head != NULL)
+	{
+		ft_putstr((char *)head->name);
+		ft_putstr("|\n");
+		head = head->next;
+	}
+	ft_putstr("-------- End of debug list -------- \n");
 }

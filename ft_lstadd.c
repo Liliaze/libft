@@ -6,7 +6,7 @@
 /*   By: dboudy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/09 16:01:03 by dboudy            #+#    #+#             */
-/*   Updated: 2016/01/08 13:06:08 by dboudy           ###   ########.fr       */
+/*   Updated: 2016/10/07 17:27:05 by dboudy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	new->next = *alst;
-	*alst = new;
+	t_list *head;
+
+	head = *alst;
+	while (head->next != NULL)
+		head = head->next;
+	head->next = new;
 }
